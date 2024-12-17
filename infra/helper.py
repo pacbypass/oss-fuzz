@@ -750,9 +750,9 @@ def docker_run(run_args, print_output=True, architecture='x86_64'):
 
 def docker_build(build_args):
   """Calls `docker build`."""
-  command = ['docker', 'build']
+  command = ['docker', 'build', '--build-arg', f"RERUN={random.randint(0, 1000000)}"]
   command.extend(build_args)
-  logger.info('Running: %s.', _get_command_string(command))
+  logger.warning('Running: %s.', _get_command_string(command))
 
   try:
     subprocess.check_call(command)
