@@ -41,11 +41,12 @@ RUN git clone https://github.com/google/protobuf.git && \
     
 RUN git clone https://github.com/abseil/abseil-cpp && \
     cd abseil-cpp && \
-    git checkout 273292d
+    git checkout 273292d && cd ..
     
-ARG RERUN
-ENV RERUN=${RERUN}
+#ARG RERUN
+#ENV RERUN=${RERUN}
 
-RUN git clone https://github.com/pacbypass/libphonenumber && echo ${RERUN}
+RUN git clone https://github.com/pacbypass/libphonenumber 
+# && echo ${RERUN}
 
 COPY build.sh $SRC/
