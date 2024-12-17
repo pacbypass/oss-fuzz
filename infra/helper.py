@@ -30,6 +30,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import random
 
 import constants
 import templates
