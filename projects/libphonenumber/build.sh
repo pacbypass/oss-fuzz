@@ -14,7 +14,9 @@
 # limitations under the License.
 #
 ################################################################################
+cd libphonenumber
 git pull
+cd ..
 
 export CXXFLAGS="$CXXFLAGS -std=c++14"
 
