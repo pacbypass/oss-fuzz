@@ -14,6 +14,7 @@
 # limitations under the License.
 #
 ################################################################################
+git pull
 
 export CXXFLAGS="$CXXFLAGS -std=c++14"
 
