@@ -38,7 +38,10 @@ RUN wget https://github.com/unicode-org/icu/releases/download/release-66-rc/icu4
 RUN git clone https://github.com/google/protobuf.git && \
     cd protobuf && \
     git checkout tags/v3.14.0
-RUN git clone https://github.com/pacbypass/libphonenumber
+RUN git clone https://github.com/pacbypass/libphonenumber && \
+    cd libphonenumber && \
+    git checkout unicode_logger && \
+    cd ..
 RUN git clone https://github.com/abseil/abseil-cpp && \
     cd abseil-cpp && \
     git checkout 273292d
